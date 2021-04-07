@@ -143,3 +143,5 @@ The $$\alpha$$ that I multiplied with the gradient is known as the learning rate
 The above steps (calculation of the MSE, calculation of the gradients and the update step) are iterated over a number of times (the value of which is also chosen by the researcher) until the algorithm reaches the minimum of the MSE function. The minimum of the MSE function is determined when the gradients $$D_{\theta}$$ and $$D_{\theta_{0}}$$ approach zero.
 
 Gradient Descent is a fairly general algorithm and can be used in many different problems. Here, I have described it's use in Linear Regression. To use Gradient Descent in other problems, we need only to choose an appropriate loss function. For example, just as we have chosen the mean squared error function for Linear Regression, we choose the cross entropy loss function for Logistic Regression which is a problem involving classification.
+
+In the next post, I will show how the mean squared error function is the most natural choice for a loss function for the problem of Linear Regression.
