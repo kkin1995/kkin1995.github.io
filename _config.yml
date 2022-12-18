@@ -48,7 +48,7 @@ plugins:
   - jekyll-include-cache
 
 include: ["_pages"]
-
+keep_files: ["_site/assets"]
 defaults:
   # _pages
   - scope:
