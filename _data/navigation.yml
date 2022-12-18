@@ -1,0 +1,7 @@
+main:
+  - title: "About Me"
+    url: /about/
+  - title: "CV"
+    url: /cv/
+  - title: "Contact Me"
+    url: /contact-me/

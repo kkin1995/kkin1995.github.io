@@ -1,0 +1,12 @@
+Karan Kinariwala:
+  name: "Karan Kinariwala"
+  location: "Bangalore, India"
+  twitter: "karankinariwala"
+  github: "kkin1995"
+  linkedin: "karan-kinariwala"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:karan.kinariwala@gmail.com"
+
+
