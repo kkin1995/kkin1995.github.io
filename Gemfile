@@ -33,3 +33,5 @@ gem "jekyll-include-cache", group: :jekyll_plugins
 # do not have a Java counterpart.
  gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
  gem "minimal-mistakes-jekyll"
+
+gem "webrick", "~> 1.8"

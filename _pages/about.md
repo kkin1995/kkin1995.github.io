@@ -5,6 +5,10 @@ permalink: /about/
 author: Karan Kinariwala
 ---
 
-## Research
+I recently completed my MSc in Physics with a thesis in Astrophysics, and I am currently in the process of applying for a PhD in Astrophysics. From as long as I can remember, I have been interested in science, and in particular physics, which has led me to pursue a career in Astrophysics.
 
-I did my master's in physics from St. Joseph's University, Bangalore, India. I got an opportunity to work with Dr. Jayant Murthy from the Indian Institute of Astrophysics on a research project that was my master's thesis and which is now amalgamating into a paper. The project was to develop a model for the interstellar dust and gas in Messier 8. Dr. Murthy's earlier work on modelling the diffuse UV radiation within 10 degrees of the galactic plane found regions that were outliers to the model. This project is an attempt to explain some of those differences in Messier 8. 
+In addition to my interest in Astrophysics, I also have a keen interest in Machine Learning. I am fascinated by the potential of Machine Learning to help us solve complex problems and make sense of vast amounts of data. I've been exploring this field through online courses and personal projects, and I hope to incorporate Machine Learning into my research in Astrophysics.
+
+I also write about various topics related to Astrophysics and Machine Learning on my blog, which you can find on [Medium](https://medium.com/@kkin1995). Through my blog, I aim to share my knowledge and insights with others who are interested in these fields.
+
+Thank you for taking the time to learn more about me, and I hope you enjoy exploring the rest of my website!
