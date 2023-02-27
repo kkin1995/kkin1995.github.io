@@ -2,6 +2,9 @@
 layout: single
 permalink: /
 ---
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
 
 Hi there! I'm **Karan**, a recent graduate with an MSc in Physics and a passion for Astrophysics and Machine Learning. I'm currently in the process of applying for a PhD in Astrophysics and working on a research project with my thesis advisor that we plan to publish in MNRAS. Welcome to my personal website, where you can learn more about me and my work.
 

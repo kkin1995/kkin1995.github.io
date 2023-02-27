@@ -3,6 +3,10 @@ permalink: /contact-me/
 author: Karan Kinariwala
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
 Thank you for visiting my personal website! If you have any questions or comments about my work, or if you'd like to discuss potential collaborations, please feel free to get in touch with me using the contact form below.
 
 <br />
