@@ -6,10 +6,10 @@ permalink: /
 {% include analytics.html %}
 {% endif %}
 
-Hi there! I'm **Karan**, a recent graduate with an MSc in Physics and a passion for Astrophysics and Machine Learning. I'm currently in the process of applying for a PhD in Astrophysics and working on a research project with my thesis advisor that we plan to publish in MNRAS. Welcome to my personal website, where you can learn more about me and my work.
+Hi there! My name is **Karan**. I recently completed a MSc in Physics focussing on Astrophysics and Machine Learning. I'm currently applying for a PhD in Astrophysics and collaborating on a research project with my thesis advisor which we plan to publish in the Monthly Notices of the Royal Astronomical Society.
 
 ![Big Profile Photo](/assets/profile.jpeg "profile.jpeg")
 
-On this website, you'll find information about my academic background, research interests and accomplishments, and my blog where I share my thoughts on various topics related to Astrophysics and Machine Learning. Feel free to take a look around and don't hesitate to get in touch if you have any questions or want to discuss potential collaborations.
+Here you'll find details about my academic background, research interests, achievements and a blog where I share my thoughts and musings. Feel free to explore and don't hesitate to contact me to discuss potential collaborations.
 
-Thank you for visiting, and I hope you enjoy learning more about my work!
+Thank you for stopping by!
