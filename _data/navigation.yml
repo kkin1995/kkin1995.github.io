@@ -3,5 +3,7 @@ main:
     url: /about/
   - title: "Blog"
     url: https://medium.com/@kkin1995
+  - title: "CV"
+    url: /assets/CV.pdf
   - title: "Contact Me"
     url: /contact-me/
