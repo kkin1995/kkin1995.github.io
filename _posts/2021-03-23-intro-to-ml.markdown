@@ -1,14 +1,16 @@
 ---
-layout: post
-title:  "A Comprehensive Guide to Machine Learning - Part 1"
-date:   2021-03-23 08:20:00 +0530
-categories: jekyll update
+title: "A Comprehensive Guide to Machine Learning - Part 1"
+date: 2021-03-23 08:20:00 +0530
+author: "Karan Kinariwala"
 usemathjax: true
+excerpt_separator: <!--more-->
 ---
 
 Except a few resources (which are pretty hard to find), the majority of resources to learn about this vast field either do not scratch the surface too much or they go deep to the point it becomes inaccesible to most people.
 
 In the guide, I hope to create a comprehensive guide to machine learning, hopefully, in a systematic and accesible way.
+
+<!--more-->
 
 However, by no means, am I an expert in this field. I have started learning Machine Learning just about 3 years ago (in 2018) myself. If you do spot a mistake in any of these posts, please let me know by creating an issue in the attached GitHub repository.
 
@@ -32,7 +34,7 @@ $$
 y = X \theta
 $$
 
-In the above equation, the matrix $$\theta$$ contains the coefficients to the dependent variables in the system of equations. The matrix $$X$$ contains the dependent variables (features). When there is only one feature, the matrix $$X$$ becomes a vector. The vector $$y$$ contains the independent variable (labels. When there is only one feature, the system of equations becomes, the all too familiar, equation of a line:
+In the above equation, the matrix $$\theta$$ contains the coefficients to the dependent variables in the system of equations. The matrix $$X$$ contains the dependent variables (features). When there is only one feature, the matrix $$X$$ becomes a vector. The vector $$y$$ contains the independent variable labels. When there is only one feature, the system of equations becomes, the all too familiar, equation of a line:
 
 $$
 y = m x

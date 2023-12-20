@@ -4,7 +4,8 @@ main:
   - title: "Projects"
     url: /projects/
   - title: "Blog"
-    url: https://medium.com/@kkin1995
+    # url: https://medium.com/@kkin1995
+    url: /blog/
   - title: "CV"
     url: /assets/CV.pdf
   - title: "Contact Me"

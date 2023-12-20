@@ -41,13 +41,17 @@ footer:
       url: "https://twitter.com/karankinariwala/"
 
 # Build settings
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 # theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   #  - jekyll-feed
   - jekyll-include-cache
 
-include: ["_pages"]
+include: ["_pages", "_posts"]
 keep_files: ["_site/assets"]
 defaults:
   # _pages
@@ -57,6 +61,17 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
