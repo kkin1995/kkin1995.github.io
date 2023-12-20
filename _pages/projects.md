@@ -13,7 +13,7 @@ My research focused on developing a detailed model for the interaction of ultrav
 
 A significant challenge addressed was the asymmetric UV background distribution around the stars in M8 partly due to the sensor faliure aboard the GALEX spacecraft. 
 
-![hip_88469_nuv_distribution](/assets/88469_nuv_coordinates.jpg)
+![hip_88469_nuv_distribution](/assets/88469_nuv_coordinates.jpg){: width="400" style="display: block; margin: auto;"}
 
 In an effort to resolve this, the model integrated both infrared data and a revised approach to the interstellar medium surrounding these stars. Specifically, I used infrared emission models from Hensley and Draine 2022 (Astrodust) to calculate the infrared emission as a function of the stellar radiation field and use Chi Square minimisation to fit this to observational data from IRAS and [Murthy 2014](https://archive.stsci.edu/prepds/uv-bkgd/)
 
