@@ -6,6 +6,10 @@ usemathjax: true
 excerpt_separator: <!--more-->
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
 In the previous post on Linear Regression, I glossed over many of the details without much explanation. One such detail was the choice of our loss function - the mean squared error (mse) function. In this post, I shall show why do we choose that particular function and how it arises naturally from the problem of Linear Regression.
 
 <!--more-->

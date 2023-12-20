@@ -6,6 +6,10 @@ usemathjax: true
 excerpt_separator: <!--more-->
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
 Except a few resources (which are pretty hard to find), the majority of resources to learn about this vast field either do not scratch the surface too much or they go deep to the point it becomes inaccesible to most people.
 
 In the guide, I hope to create a comprehensive guide to machine learning, hopefully, in a systematic and accesible way.
