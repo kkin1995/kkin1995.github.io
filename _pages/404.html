@@ -3,6 +3,10 @@ permalink: /404.html
 layout: default
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;

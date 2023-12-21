@@ -1,12 +1,18 @@
 ---
-layout: post
-title:  "A Comprehensive Guide to Machine Learning - Part 1a - Loss Functions"
-date:   2021-04-06 08:20:00 +0530
-categories: jekyll update
+title: "A Comprehensive Guide to Machine Learning - Part 1a - Loss Functions"
+date: 2021-04-06 08:20:00 +0530
+author: "Karan Kinariwala"
 usemathjax: true
+excerpt_separator: <!--more-->
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
 In the previous post on Linear Regression, I glossed over many of the details without much explanation. One such detail was the choice of our loss function - the mean squared error (mse) function. In this post, I shall show why do we choose that particular function and how it arises naturally from the problem of Linear Regression.
+
+<!--more-->
 
 In any machine learning problem, our task is to maximize a function known as the Likelihood which is a function of our parameters $$ \theta $$ when we know the distribution of the data. Mathematically, the likelihood function is identical to the probability of observing the data given the parameters $$ \theta $$.
 

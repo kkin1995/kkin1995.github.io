@@ -1,7 +1,12 @@
 main:
   - title: "About Me"
     url: /about/
+  - title: "Projects"
+    url: /projects/
+  - title: "Blog"
+    # url: https://medium.com/@kkin1995
+    url: /blog/
   - title: "CV"
-    url: /cv/
+    url: /assets/CV.pdf
   - title: "Contact Me"
     url: /contact-me/

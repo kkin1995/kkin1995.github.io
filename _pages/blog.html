@@ -1,0 +1,18 @@
+---
+permalink: /blog/
+---
+
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small>Posted on {{ post.date | date: "%b %-d, %Y" }}</small>
+        <em style="font-size: 18px;">{{ post.excerpt }}</em>
+        <a href="{{ post.url | relative_url }}" class="btn btn--primary">Read More</a>
+      </li>
+    {% endfor %}
+  </ul>
