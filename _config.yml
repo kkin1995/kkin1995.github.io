@@ -23,7 +23,7 @@ email: karan[dot]kinariwala[at]gmail[dot]com
 description: >- # this means to ignore newlines until "baseurl:"
   🔭 Astrophysics enthusiast & Master's grad, navigating cosmic mysteries through data. PhD journey ahead.
 # baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://karankinariwala.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: karankinariwala
 github_username:  kkin1995
 google_analytics: G-J6L6MBM6PY
