@@ -1,0 +1,115 @@
+---
+permalink: /ucc/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>UCC Report Form</title>
+        <style>
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: margin-top 0.5s;
+        }
+        form {
+            display: none;
+        }
+        #result {
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p>Select Type of UCC to Report</p>
+            <button id="callButton">Call</button>
+            <button id="smsButton">SMS</button>
+
+            <form id="callForm">
+                <div>
+                    <label for="callReason">Reasons for reporting UCC:</label>
+                    <input type="text" id="callReason" name="callReason">
+                </div>
+                <div>
+                    <label for="callPhone">Phone Number:</label>
+                    <input type="tel" id="callPhone" name="callPhone">
+                </div>
+                <div>
+                    <label for="callDate">Date:</label>
+                    <input type="date" id="callDate" name="callDate">
+                </div>
+                <button type="button" onclick="submitCallForm()">Submit</button>
+            </form>
+
+            <form id="smsForm">
+                <div>
+                    <label for="smsText">Paste SMS Text:</label>
+                    <textarea id="smsText" name="smsText"></textarea>
+                </div>
+                <div>
+                    <label for="smsPhone">Phone Number:</label>
+                    <input type="text" id="smsPhone" name="smsPhone">
+                </div>
+                <div>
+                    <label for="smsDate">Date:</label>
+                    <input type="date" id="smsDate" name="smsDate">
+                </div>
+                <button type="button" onclick="submitSmsForm()">Submit</button>
+            </form>
+
+            <div id="result" style="margin-top: 20px; display: none;">
+                <p id="formattedString">
+                    <p>You can paste the following text into an SMS and send it to 1909</p>
+                </p>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("callButton").onclick = function() {
+                document.getElementById("callForm").style.display = "block";
+                document.getElementById("smsForm").style.display = "none";
+                document.getElementById("result").style.display = "none"; // Hide Result When Switching Forms
+            };
+
+            document.getElementById("smsButton").onclick = function() {
+                document.getElementById("smsForm").style.display = "block";
+                document.getElementById("callForm").style.display = "none";
+                document.getElementById("result").style.display = "none"; // Hide Result When Switching Forms
+            };
+
+            function submitCallForm() {
+                const reason = document.getElementById("callReason").value;
+                const phone = document.getElementById("callPhone").value;
+                const date = document.getElementById("callDate").value;
+
+                const formattedText = `iApp-${reason},${phone},${date.split("-").reverse().join("/")}`;
+
+                displayResult(formattedText);
+            }
+
+            function submitSmsForm() {
+                const text = document.getElementById("smsText").value;
+                const phone = document.getElementById("smsPhone").value;
+                const date = document.getElementById("smsDate").value;
+
+                console.log(text);
+                console.log(phone);
+                console.log(date);
+
+                const formattedText = `iApp-${text},${phone},${date.split("-").reverse().join("/")}`;
+                console.log(formattedText);
+
+
+                displayResult(formattedText);
+            }
+
+            function displayResult(text) {
+                document.getElementById("formattedString").textContent = text;
+                document.getElementById("result").style.display = "block";
+            }
+        </script>
+    </body>
+</html>
