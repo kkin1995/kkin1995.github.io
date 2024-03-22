@@ -2,6 +2,10 @@
 permalink: /ucc/
 ---
 
+{% if jekyll.environment == 'production' and site.google_analytics %}
+{% include analytics.html %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,6 +23,9 @@ permalink: /ucc/
         }
         #result {
             display: none;
+        }
+        #formattedString {
+            font-weight: bold;
         }
         </style>
     </head>
@@ -61,9 +68,9 @@ permalink: /ucc/
             </form>
 
             <div id="result" style="margin-top: 20px; display: none;">
-                <p id="formattedString">
-                    <p>You can paste the following text into an SMS and send it to 1909</p>
-                </p>
+                <p>You can paste the following text into an SMS and send it to 1909</p>
+                <p id="formattedString"></p>
+                <button id="copyButton" onclick="copyToClipboard()">Copy To Clipboard</button>
             </div>
         </div>
 
@@ -109,6 +116,21 @@ permalink: /ucc/
             function displayResult(text) {
                 document.getElementById("formattedString").textContent = text;
                 document.getElementById("result").style.display = "block";
+            }
+
+            function copyToClipboard() {
+                const text = document.getElementById("formattedString").textContent
+                
+                navigator.clipboard.writeText(text).then(function() {
+                        document.getElementById("copyButton").textContent = "Copied!";
+
+                        setTimeout(function() {
+                            document.getElementById("copyButton").textContent = "Copy To Clipboard";
+                        }, 2000);
+                    }, function() {
+                        document.getElementById("copyButton").textContent = "Copy Failed!";
+                    }
+                )
             }
         </script>
     </body>
