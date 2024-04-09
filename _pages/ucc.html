@@ -29,6 +29,7 @@ title: UCC Complaint Form
             font-weight: bold;
         }
         </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -71,7 +72,7 @@ title: UCC Complaint Form
             <div id="result" style="margin-top: 20px; display: none;">
                 <p>You can paste the following text into an SMS and send it to 1909</p>
                 <p id="formattedString"></p>
-                <button id="copyButton" onclick="copyToClipboard()">Copy To Clipboard</button>
+                <button id="copyButton" data-clipboard-target="#formattedString">Copy To Clipboard</button>
             </div>
         </div>
 
@@ -119,20 +120,14 @@ title: UCC Complaint Form
                 document.getElementById("result").style.display = "block";
             }
 
-            function copyToClipboard() {
-                const text = document.getElementById("formattedString").textContent
-                
-                navigator.clipboard.writeText(text).then(function() {
-                        document.getElementById("copyButton").textContent = "Copied!";
+            new ClipboardJS('#copyButton').on('success', function(e) {
+                e.trigger.textContent = 'Copied!';
+                setTimeout(function() {
+                    e.trigger.textContent = 'Copy To Clipboard!';
+                }, 2000);
 
-                        setTimeout(function() {
-                            document.getElementById("copyButton").textContent = "Copy To Clipboard";
-                        }, 2000);
-                    }, function() {
-                        document.getElementById("copyButton").textContent = "Copy Failed!";
-                    }
-                )
-            }
+                e.clearSelection();
+            });
         </script>
     </body>
 </html>
