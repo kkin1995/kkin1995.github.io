@@ -78,18 +78,52 @@ title: UCC Complaint Form
 
         <script>
             document.getElementById("callButton").onclick = function() {
+                gtag('event', 'form_selection', {
+                    'event_category': 'UCC Form',
+                    'event_label': 'Call'
+                });
+
+                startTime = new Date().getTime();
+
                 document.getElementById("callForm").style.display = "block";
                 document.getElementById("smsForm").style.display = "none";
                 document.getElementById("result").style.display = "none"; // Hide Result When Switching Forms
             };
 
             document.getElementById("smsButton").onclick = function() {
+                gtag('event', 'form_selection', {
+                    'event_category': 'UCC Form',
+                    'event_label': 'SMS'
+                });
+
+                startTime = new Date().getTime();
+
                 document.getElementById("smsForm").style.display = "block";
                 document.getElementById("callForm").style.display = "none";
                 document.getElementById("result").style.display = "none"; // Hide Result When Switching Forms
             };
 
             function submitCallForm() {
+                // Set custom dimension for UCC Type
+                gtag('set', {'ucc_type': 'Call'});
+
+                // Set custom dimension for Submission Status
+                gtag('set', {'submission_status': 'Completed'});
+
+                gtag('event', 'form_submission', {
+                    'event_category': 'UCC Form',
+                    'event_label': 'Call'
+                });
+
+                const endTime = new Date().getTime();
+                const timeSpent = endTime - startTime;
+                gtag('event', 'timing_complete', {
+                    'name' : 'UCC Form Completion Time',
+                    'value' : timeSpent,
+                    'event_category' : 'UCC Form',
+                    'event_label' : 'Call'
+                });
+
                 const reason = document.getElementById("callReason").value;
                 const phone = document.getElementById("callPhone").value;
                 const date = document.getElementById("callDate").value;
@@ -100,6 +134,26 @@ title: UCC Complaint Form
             }
 
             function submitSmsForm() {
+                // Set custom dimension for UCC Type
+                gtag('set', {'ucc_type': 'SMS'});
+
+                // Set custom dimension for Submission Status
+                gtag('set', {'submission_status': 'Completed'});
+
+                gtag('event', 'form_submission', {
+                    'event_category': 'UCC Form',
+                    'event_label': 'SMS'
+                });
+
+                const endTime = new Date().getTime();
+                const timeSpent = endTime - startTime;
+                gtag('event', 'timing_complete', {
+                    'name' : 'UCC Form Completion Time',
+                    'value' : timeSpent,
+                    'event_category' : 'UCC Form',
+                    'event_label' : 'SMS'
+                });
+
                 const text = document.getElementById("smsText").value;
                 const phone = document.getElementById("smsPhone").value;
                 const date = document.getElementById("smsDate").value;
@@ -121,6 +175,10 @@ title: UCC Complaint Form
             }
 
             new ClipboardJS('#copyButton').on('success', function(e) {
+                gtag('event', 'copy_to_clipboard', {
+                    'event_category': 'UCC Form',
+                    'event_label': 'Success'
+                });
                 e.trigger.textContent = 'Copied!';
                 setTimeout(function() {
                     e.trigger.textContent = 'Copy To Clipboard!';
@@ -128,6 +186,23 @@ title: UCC Complaint Form
 
                 e.clearSelection();
             });
+
+            const formFields = document.querySelectorAll('input, textarea');
+            formFields.forEach(field => {
+                field.addEventListener('focus', function() {
+                    gtag('event', 'field_focus', {
+                        'event_category': 'UCC Form',
+                        'event_label': this.name
+                    });
+                });
+                field.addEventListener('blur', function() {
+                    gtag('event', 'field_blur', {
+                        'event_category': 'UCC Form',
+                        'event_label': this.name
+                    });
+                });
+            });
+
         </script>
     </body>
 </html>
